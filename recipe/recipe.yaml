@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,8 +23,6 @@ requirements:
   run:
     - python >=${{ python_min }}
     - matplotlib-base >=3.9.2,<4.0
-    - pandas >=2.2.2,<3.0
-    - bs4 >=4.12.3,<5.0
 
 tests:
   - python:
@@ -38,6 +36,7 @@ tests:
       run:
         - python ${{ python_min }}.*
         - pytest
+        - pandas >=2.2.2,<3.0
     files:
       source:
         - /tests
