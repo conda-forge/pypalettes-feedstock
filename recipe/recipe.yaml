@@ -1,6 +1,7 @@
 context:
   name: pypalettes
   version: "0.1.5"
+  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
@@ -22,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - matplotlib-base >=3.9.2,<4.0
+    - matplotlib-base >=3.10.0, <4.0
 
 tests:
   - python:
@@ -35,8 +36,8 @@ tests:
     requirements:
       run:
         - python ${{ python_min }}.*
-        - pytest
-        - pandas >=2.2.2,<3.0
+        - pytest >=8.3.4
+        - pandas >=2.2.3
     files:
       source:
         - /tests
