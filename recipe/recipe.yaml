@@ -1,6 +1,6 @@
 context:
   name: pypalettes
-  version: "0.1.5"
+  version: "0.1.6"
   python_min: "3.10"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: fb114a0b8bf92125d3e9068d69fa8b6509fba84b758faae7d8303f475a8b7e31
+  sha256: c11a2e0d45de7c4333c602e49209807e62d88226f2b777ad47f584256c5c0cbe
 
 build:
   noarch: python
