@@ -1,7 +1,6 @@
 context:
   name: pypalettes
-  version: "0.2.1"
-  python_min: "3.10"
+  version: "0.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f086b8c3275cf36472216532f4a4c80ebc1a6e639ac5fff9609f94c4123e44c1
+  sha256: ecb1870b10e94aec8d723ec1e6667e1415b276a4b52976cf74edc1d746859c1f
 
 build:
   noarch: python
@@ -30,7 +29,9 @@ tests:
       imports:
         - pypalettes
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://python-graph-gallery.com/color-palette-finder/
